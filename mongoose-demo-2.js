@@ -15,9 +15,15 @@ kittySchema.methods.speak = function () {
   const greeting = this.name
   ? "Meow name is " + this.name
   : "I don't have a name";
+  /* if(this.name){
+    "Meow name is " + this.name;
+  } else {
+    "I don't have a name";
+  } */
   console.log(greeting);
 }
 
+// Testing only
 const Kitten = mongoose.model('Kitten', kittySchema);
 
 const fluffy = new Kitten({ name: 'fluffy' });
